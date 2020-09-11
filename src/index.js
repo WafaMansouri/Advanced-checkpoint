@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import ProductTable from './App';
 import * as serviceWorker from './serviceWorker';
-
+import {products} from './App';
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ProductTable table={products}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
