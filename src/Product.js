@@ -1,18 +1,17 @@
 import React from 'react'
 import {styles} from './App'
-import Proptypes from 'prop-types'
-const Product = (props) => {
+import PropTypes from 'prop-types'
+const Product = ({elem}) => {
 return (<tr>
-    <td style={styles}>{props.elem.name}</td>
-    <td style={styles}>{props.elem.price}</td>
-    <td style={styles}>{props.elem.category}</td>
+    <td style={styles}>{elem.name}</td>
+    <td style={styles}>{elem.price}</td>
+    <td style={styles}>{elem.category}</td>
 </tr>)
 }
-Product.proptype={
-    elem:Proptypes.exact({
-        name:Proptypes.string,
-        price:Proptypes.number,
-        category:Proptypes.string
+Product.propTypes={elem:PropTypes.exact({
+        name:PropTypes.string.isRequired,
+        price:PropTypes.number.isRequired,
+        category:PropTypes.string.isRequired
     })
 }
 export default Product
